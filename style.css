@@ -179,13 +179,19 @@ img {
 
 .header .menu-btn:checked ~ .menu {
     text-align: center;
-    background: #000;
-    /* clip-path: polygon(25% 0%, 75% 0, 75% 100%, 25% 100%); */
+    background: rgba(0, 0, 0, 0.65) url(assets/menu.jpg) center center/cover;
+    background-blend-mode: darken;
     position: absolute;
     left: 0;
     width: 100%;
     max-height: 240px;
 }
+
+/* .header .menu-btn:checked ~ .menu > div {
+    clip-path: polygon(30% 0, 100% 0, 100% 50%, 70% 100%, 0 100%, 0 50%);
+    background: rgba(0, 0, 0, 0.65) url(assets/menu.jpg) center center/cover;
+    background-blend-mode: darken;
+} */
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
@@ -408,12 +414,19 @@ footer > div::after {
 }
 
 @media (max-width: 500px) {
-    main section h2 {
-        font-size: 2.2em;
+
+    .header {
+        height: 50vh;
     }
 
     .header div#logo {
         width: 250px;
+    }
+
+    .header div#logo a#contactar {
+        margin-top: 50px;
+        font-size: .8em;
+        padding: 10px 20px;
     }
 
     section#servicios div#lista-servicios .container p {
@@ -448,6 +461,31 @@ footer > div::after {
 
     .fab {
         font-size: 1.2em;
+    }
+}
+
+@media (max-width: 585px) {
+    section#nosotros div#barbero {
+        width: 200px;
+    }
+
+    main section h2 {
+        font-size: 2.2em;
+    }
+
+    section#nosotros div:first-child {
+        width: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    section#nosotros div#barbero {
+        width: 150px;
+    }
+
+    section#nosotros div:first-child {
+        width: 150px;
+        font-size: .6em;
     }
 }
 

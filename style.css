@@ -179,19 +179,12 @@ img {
 
 .header .menu-btn:checked ~ .menu {
     text-align: center;
-    background: rgba(0, 0, 0, 0.65) url(assets/menu.jpg) center center/cover;
-    background-blend-mode: darken;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1)), url("assets/fondo.jpg") center center/cover;
     position: absolute;
     left: 0;
     width: 100%;
-    max-height: 240px;
+    max-height: 500px;
 }
-
-/* .header .menu-btn:checked ~ .menu > div {
-    clip-path: polygon(30% 0, 100% 0, 100% 50%, 70% 100%, 0 100%, 0 50%);
-    background: rgba(0, 0, 0, 0.65) url(assets/menu.jpg) center center/cover;
-    background-blend-mode: darken;
-} */
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;

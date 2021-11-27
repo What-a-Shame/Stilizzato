@@ -1,0 +1,292 @@
+/* Fuente para letras generales */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Fuente para titulos */
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+/*                     */
+
+/* VARIABLES */
+
+:root {
+    --main-oscuro: #211d1a;
+    --main-claro: #b8b2a2;
+    --shadow: #927411;
+}
+
+/*           */
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background: var(--main-claro);
+    color: var(--main-oscuro);
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(#211d1afd, #211d1afd), url("assets/fondo.jpg");
+    background-attachment: fixed;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+main section {
+    width: 85%;
+    padding: 50px;
+    margin: auto;
+}
+
+main section h2 {
+    font-family: 'Rye', cursive;
+    font-weight: normal;
+    color: var(--main-claro);
+    font-size: 4em;
+    text-shadow: 2px 2px 2px var(--shadow);
+}
+
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* Header */
+
+.header {
+    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 85% 100%, 15% 100%, 0% 60%, 0 0);
+    background: rgba(0, 0, 0, 0.65) url("assets/cabecera.jpg") no-repeat center center/cover;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    height: 90vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header div#logo {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header div#logo img {
+    transition: transform .3s ease-in-out;
+}
+
+.header div#logo img:hover {
+    transform: scale(1.02);
+}
+
+.header div#logo a#contactar {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 50px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    background: var(--main-claro);
+    transition: transform .3s ease-in-out;
+}
+
+.header div#logo a#contactar:hover {
+    transform: scale(1.05);
+    background: #a39d8d;
+    box-shadow: 0px 0px 15px 1px #6b6b6b;
+}
+
+.header li a {
+    font-family: 'Rye', cursive;
+    filter: brightness(1.2);
+    color: var(--main-claro);
+    font-size: 2.5em;
+    display: block;
+    margin: 50px 0;
+    padding: 20px 20px;
+    transition: transform .3s ease-in-out;
+}
+
+.header ul.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 2px var(--shadow);
+}
+
+/* Main */
+
+/* Seccion Nosotros */
+
+section#nosotros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+}
+
+section#nosotros div:first-child {
+    width: 30%;
+    text-align: center;
+}
+section#nosotros p {
+    margin: 5% 0;
+    font-size: 1.2em;
+}
+
+section#nosotros div#barbero {
+    width: 25%;
+}
+
+section#nosotros div#barbero img {
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    transition: all .5s ease-in-out;
+}
+
+section#nosotros div#barbero:hover img {
+    transform: scaleX(-1);
+    cursor: pointer;
+}
+
+/* Interseccion */
+
+div#interseccion {
+    height: 45vh;
+    background: rgba(0, 0, 0, 0.45) url("assets/interseccion.jpg") no-repeat center center/cover;
+    clip-path: polygon(50% 15%, 100% 30%, 100% 100%, 50% 85%, 0 70%, 0 0);
+    background-blend-mode: darken;
+    background-attachment: fixed;
+}
+
+/* Seccion Servicios */
+
+section#servicios h2 {
+    text-align: center;
+}
+
+section#servicios div#lista-servicios {
+    margin: 100px 0 0 0;
+}
+
+section#servicios div#lista-servicios .container img {
+    width: 400px;
+    height: 45vh;
+    object-fit:cover;
+    transition: all .3s ease-in-out;
+}
+
+section#servicios div#lista-servicios .container p {
+    font-family: 'Rye', cursive;
+    color: var(--main-claro);
+    text-shadow: 2px 2px 2px var(--main-oscuro);
+    opacity: 0;
+    width: 100%;
+    font-size: 2.5em;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    transition: .6s linear;
+}
+
+section#servicios div#lista-servicios .container > div {
+    position: relative;
+}
+
+section#servicios div#lista-servicios .container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+}
+
+section#servicios div#lista-servicios .container > div:hover img {
+    cursor: pointer;
+    opacity:0.3;
+}
+
+section#servicios div#lista-servicios .container > div:hover p {
+    opacity: 1;
+}
+
+/* Interseccion 2 */
+
+div#interseccion2 {
+    height: 45vh;
+    background: rgba(0, 0, 0, 0.45) url("assets/interseccion2.jpg") no-repeat center center/cover;
+    clip-path: polygon(50% 15%, 100% 0, 100% 70%, 50% 85%, 0 100%, 0 30%);
+    background-blend-mode: darken;
+    background-attachment: fixed;
+}
+
+/* Galeria */
+
+section#galeria h2 {
+    text-align: center;
+}
+
+section#galeria div#imagenes {
+    margin: 100px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+section#galeria div#imagenes img {
+    max-width: 450px;
+    max-height: 45vh;
+    object-fit: cover;
+    transition: all .3s ease-in-out;
+}
+
+section#galeria div#imagenes img:hover {
+    opacity: .55;
+    transform: scale(.99);
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background: rgba(0, 0, 0, .65);
+    color: var(--main-claro);
+    padding: 50px;
+    text-align: center;
+    clip-path: polygon(50% 0%, 100% 30%, 100% 100%, 0 100%, 0 30%);
+}
+
+footer > div::after {
+    content: " ";
+    display: block;
+    width: 50%;
+    margin: 25px auto;
+    height: 2px;
+    background: var(--main-claro);
+}
+
+.fab {
+    color: white;
+    font-size: 2em;
+    margin: 0 10px;
+    transition: .3s linear;
+}
+
+.fab:hover {
+    color: var(--main-claro);
+    transform: translateY(-5px);
+    cursor: pointer;
+}

@@ -1,0 +1,37 @@
+Tonalidades semi-oscuras para dar un aire de elegancia (tonos ocres, marrones semi-oscuros, negros no azabache...)
+
+En funcion de las tonalidades de fondo, contraste en botones y secciones con colores dorados, oro... para generar ese aire
+de elegancia, como de clase superior.
+
+Una pagina muy concisa, sin exceso de informacion y muy visual, ya que al final es lo que mas llama la atencion.
+
+En una barberia el cliente busca encontrar lo que necesita rapido y facil, luego si ponemos la informacion concreta y acompañado de muchas imagenes
+será ideal.
+
+Al final aunque sea una web, el cliente debe visitar el local, por lo que debe quedar resaltado el metodo para solicitar una cita
+y que no sea complejo para el usuario.
+
+Lo mas importante es hacer una pagina que no sea muy compleja, pero tampoco se denote vacio en ella, que sea lo suficientemente larga para que no sobrecargar
+al usuario y que se pierda, y hacerla muy visualmente atractiva ya que esto hace denotar que en la barberia hay buen gusto por el diseño, el estilo ...
+
+/////////////////////////////////// LETRAS GENERAL ///////////////////////////////////
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+font-family: 'Roboto', sans-serif;
+
+/////////////////////////////////// TITULOS ///////////////////////////////////
+
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+font-family: 'Rye', cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=Sancreek&display=swap');
+font-family: 'Sancreek', cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+font-family: 'Bokor', cursive;
+
+/////////////////////////////////// PALETA DE COLORES ///////////////////////////////////
+
+https://colors.muz.li/
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////

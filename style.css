@@ -104,28 +104,120 @@ img {
     background: #a39d8d;
     box-shadow: 0px 0px 15px 1px #6b6b6b;
 }
-
+  
+.header ul.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+}
+  
 .header li a {
     font-family: 'Rye', cursive;
     filter: brightness(1.2);
     color: var(--main-claro);
-    font-size: 2.5em;
+    font-size: 1.2em;
     display: block;
-    margin: 50px 0;
     padding: 20px 20px;
     transition: transform .3s ease-in-out;
 }
-
-.header ul.menu {
-    display: flex;
-    justify-content: space-around;
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
+  
+.header li a:hover {
     transform: scale(1.1);
     text-shadow: 2px 2px 2px var(--shadow);
 }
+
+.header .menu {
+    max-height: 0;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+  
+@media (min-width: 960px) {
+    .header li {
+        float: left;
+    }
+    .header ul.menu {
+        display: flex;
+        flex-direction: row;
+    }
+    .header li a {
+        font-size: 2.5em;
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+}
+
 
 /* Main */
 
@@ -133,21 +225,23 @@ img {
 
 section#nosotros {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center ;
 }
 
 section#nosotros div:first-child {
-    width: 30%;
+    width: 400px;
     text-align: center;
 }
+
 section#nosotros p {
     margin: 5% 0;
     font-size: 1.2em;
 }
 
 section#nosotros div#barbero {
-    width: 25%;
+    width: 350px;
 }
 
 section#nosotros div#barbero img {
@@ -289,4 +383,61 @@ footer > div::after {
     color: var(--main-claro);
     transform: translateY(-5px);
     cursor: pointer;
+}
+
+/* Media Query */
+
+@media (max-width: 500px) {
+    main section h2 {
+        font-size: 2.2em;
+    }
+
+    .header div#logo {
+        width: 250px;
+    }
+
+    section#servicios div#lista-servicios .container p {
+        font-size: 1.5em;
+    }
+
+    section#servicios div#lista-servicios .container img {
+        width: 250px;
+    }
+
+    section#nosotros div:first-child {
+        width: 250px;
+        font-size: .8em;
+    }
+
+    section#nosotros div#barbero {
+        width: 250px;
+    }
+
+    section#nosotros div:first-child {
+        width: 250px;
+    }
+
+    section#galeria div#imagenes {
+        gap: 20px;
+    }
+
+    section#galeria div#imagenes img {
+        max-height: 15vh;
+    }
+
+    .fab {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 1120px) {
+    section#nosotros {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section#nosotros div#barbero img {
+        clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+    }
 }

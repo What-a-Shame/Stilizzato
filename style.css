@@ -458,27 +458,32 @@ footer > div::after {
 }
 
 @media (max-width: 585px) {
+    main section {
+        width: 95%;
+        padding: 25px;
+    }
+    
     section#nosotros div#barbero {
-        width: 200px;
+        width: 300px;
     }
 
     main section h2 {
-        font-size: 2.2em;
+        font-size: 2.6em;
     }
 
     section#nosotros div:first-child {
-        width: 250px;
+        width: 300px;
     }
 }
 
 @media (max-width: 400px) {
     section#nosotros div#barbero {
-        width: 150px;
+        width: 250px;
     }
 
     section#nosotros div:first-child {
-        width: 150px;
-        font-size: .6em;
+        width: 250px;
+        font-size: .8em;
     }
 }
 

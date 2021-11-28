@@ -412,7 +412,7 @@ footer > div::after {
     }
 
     .header {
-        height: 70vh;
+        height: 65vh;
     }
 
     .header {
@@ -480,10 +480,6 @@ footer > div::after {
 
 @media (max-width: 400px) {
 
-    .header {
-        height: 55vh;
-    }
-
     section#nosotros div:first-child {
         font-size: .8em;
     }
@@ -492,5 +488,11 @@ footer > div::after {
     section#galeria div#imagenes img {
         width: 275px;
         height: 28vh;
+    }
+}
+
+@media (max-height: 570px) {
+    .header {
+        height: 80vh;
     }
 }

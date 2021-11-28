@@ -348,8 +348,8 @@ section#galeria div#imagenes {
 }
 
 section#galeria div#imagenes img {
-    max-width: 450px;
-    max-height: 45vh;
+    width: 450px;
+    height: 45vh;
     object-fit: cover;
     transition: all .3s ease-in-out;
 }
@@ -394,23 +394,55 @@ footer > div::after {
 
 /* Media Query */
 
-@media (max-width: 960px) {
-    .header div#logo {
-        margin-top: 50px;
+@media (max-width: 1120px) {
+    section#nosotros {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section#nosotros div#barbero img {
+        clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
+    .header div#logo {
+        margin-top: 80px;
+    }
+
+    .header {
+        height: 70vh;
+    }
+
     .header {
         clip-path: polygon(0 0, 100% 0, 100% 90%, 75% 100%, 25% 100%, 0 90%);
     }
 }
 
-@media (max-width: 500px) {
-
-    .header {
-        height: 50vh;
+@media (max-width: 600px) {
+    main section {
+        width: 95%;
+        padding: 25px;
     }
+    
+    section#nosotros div#barbero,
+    section#nosotros div:first-child {
+        width: 90%;
+    }
+
+    section#servicios div#lista-servicios .container img,
+    section#galeria div#imagenes img {
+        width: 400px;
+        height: 35vh;
+    }
+
+    main section h2 {
+        font-size: 2.6em;
+    }
+}
+
+@media (max-width: 500px) {
 
     .header div#logo {
         width: 250px;
@@ -426,30 +458,19 @@ footer > div::after {
         font-size: 1.5em;
     }
 
-    section#servicios div#lista-servicios .container img {
-        width: 250px;
-        height: 35vh;
-    }
-
     section#nosotros div:first-child {
-        width: 250px;
         font-size: .8em;
     }
 
-    section#nosotros div#barbero {
-        width: 250px;
+    section#servicios div#lista-servicios .container img,
+    section#galeria div#imagenes img {
+        width: 350px;
+        height: 30vh;
     }
 
-    section#nosotros div:first-child {
-        width: 250px;
-    }
-
+    section#servicios div#lista-servicios .container,
     section#galeria div#imagenes {
         gap: 20px;
-    }
-
-    section#galeria div#imagenes img {
-        max-height: 25vh;
     }
 
     .fab {
@@ -457,44 +478,19 @@ footer > div::after {
     }
 }
 
-@media (max-width: 585px) {
-    main section {
-        width: 95%;
-        padding: 25px;
-    }
-    
-    section#nosotros div#barbero {
-        width: 300px;
-    }
-
-    main section h2 {
-        font-size: 2.6em;
-    }
-
-    section#nosotros div:first-child {
-        width: 300px;
-    }
-}
-
 @media (max-width: 400px) {
-    section#nosotros div#barbero {
-        width: 250px;
+
+    .header {
+        height: 50vh;
     }
 
     section#nosotros div:first-child {
-        width: 250px;
         font-size: .8em;
     }
-}
 
-@media (max-width: 1120px) {
-    section#nosotros {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-    }
-
-    section#nosotros div#barbero img {
-        clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+    section#servicios div#lista-servicios .container img,
+    section#galeria div#imagenes img {
+        width: 275px;
+        height: 28vh;
     }
 }

@@ -481,7 +481,7 @@ footer > div::after {
 @media (max-width: 400px) {
 
     .header {
-        height: 50vh;
+        height: 55vh;
     }
 
     section#nosotros div:first-child {
